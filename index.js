@@ -1,13 +1,13 @@
  let n = parseInt(prompt('ВВедіть n-не число Фібоначчі', ""));
  // //Fn = Fn-1 + Fn-2
- let f = [0, 1];
+ let f = [1, 1];
  let result;
 
 
  //Result1: 
  function fiboarr(n) {
-     for (let i = 1; i < n; i++) {
-         result = f[i] + f[i - 1];
+     for (let i = 2; i < n; i++) {
+         result = f[i-1] + f[i - 2];
          f.push(result);
      }
      return f[f.length - 1];
@@ -25,9 +25,9 @@
 
  //Result3:
  function fibowhile(n) {
-    let i = 2;
+    let i = 1;
     while (i < n) {
-        result = f[n - 1] + f[n - 2];
+        result = f[i - 1] + f[i - 2];
         i += 1;
      }
      return result;
@@ -35,9 +35,9 @@
  
  //Result4:
  function fibodowhile(n) {
-     let i=2;
+     let i=1;
      do{
-        result = f[n - 1] + f[n - 2];
+        result = f[i - 1] + f[i - 2];
         i++;
      }
      while(i<n);
