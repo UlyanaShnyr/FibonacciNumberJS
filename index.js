@@ -32,8 +32,20 @@
      }
      return result;
  }
+ 
+ //Result4:
+ function fibodowhile(n) {
+     let i=2;
+     do{
+        result = f[n - 1] + f[n - 2];
+        i++;
+     }
+     while(i<n);
+     return result;
+ }
 
  document.write("Число Фібоначчі через масив:  " + fiboarr(n) + "<br>");
  document.write("Число Фібоначчі через рекурсію:  " + fiborecurs(n) + "<br>");
  document.write("Число Фібоначчі через цикл while:  " + fibowhile(n) + "<br>");
+ document.write("Число Фібоначчі через цикл do while:  " + fibodowhile(n) + "<br>");
  
